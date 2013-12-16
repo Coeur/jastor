@@ -5,14 +5,9 @@ Jdimo is an Objective-C base class that is initialized with a dictionary (probab
 
 It supports nested types, arrays, NSString, NSNumber, NSDate and more.
 
-Jdimo is NOT a JSON parser. For that, you have [JSONKit](https://github.com/johnezang/JSONKit), [yajl](https://github.com/gabriel/yajl-objc) and many others.
+Jdimo is NOT a JSON parser. For that, you have NSJSONSerialization.
 
-The name sounds like **JSON to Object**er. Or something.
-
-
-**Upgrade from previous version:**
-
-Add `dealloc` mehtods to your models and nillify your peoperties. Automattic `dealloc` is no longer done by Jdimo.
+The name sounds like **JSON Dictionary to Model Object**. Or something.
 
 
 Examples
@@ -36,36 +31,20 @@ and the following class:
 @end
 
 @implementation Product
-@synthesize name, amount;
-
-- (void)dealloc {
-	self.name = nil;
-	self.amount = nil;
-	
-	[super dealloc];
-}
 @end
 ```
 
-with Jdimo, you can just inherit from `Jdimo` class, and use `initWithDictionary:`
+with Jdimo, you can just inherit from `ObjectModel` class, and use `initWithDictionary:`
 
 ```objc
 // Product.h
-@interface Product : Jdimo
+@interface Product : ObjectModel
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, retain) NSNumber *amount;
 @end
 
 // Product.m
 @implementation Product
-@synthesize name, amount;
-
-- (void)dealloc {
-	self.name = nil;
-	self.amount = nil;
-	
-	[super dealloc];
-}
 @end
 
 // Some other code
@@ -99,31 +78,16 @@ Jdimo also converts nested objects to their destination type:
 
 // ProductCategory.m
 @implementation ProductCategory
-@synthesize name;
-
-- (void)dealloc {
-	self.name = nil;
-	
-	[super dealloc];
-}
 @end
 
 // Product.h
-@interface Product : Jdimo
+@interface Product : ObjectModel
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, retain) ProductCategory *category;
 @end
 
 // Product.m
 @implementation Product
-@synthesize name, category;
-
-- (void)dealloc {
-	self.name = nil;
-	self.category = nil;
-	
-	[super dealloc];
-}
 @end
 
 
@@ -163,35 +127,21 @@ Jdimo also supports arrays of a certain type:
 
 // ProductCategory.m
 @implementation ProductCategory
-@synthesize name;
-
-- (void)dealloc {
-	self.name = nil;
-	
-	[super dealloc];
-}
 @end
 
 // Product.h
-@interface Product : Jdimo
+@interface Product : ObjectModel
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, retain) NSArray *categories;
 @end
 
 // Product.m
 @implementation Product
-@synthesize name, categories;
 
 + (Class)categories_class {
 	return [ProductCategory class];
 }
 
-- (void)dealloc {
-	self.name = nil;
-	self.categories = nil;
-	
-	[super dealloc];
-}
 @end
 
 
@@ -253,18 +203,11 @@ Jdimo can handle trees of data:
 
 // ProductCategory.m
 @implementation ProductCategory
-@synthesize name, children;
 
 + (Class)children_class {
 	return [ProductCategory class];
 }
 
-- (void)dealloc {
-	self.name = nil;
-	self.children = nil;
-	
-	[super dealloc];
-}
 @end
 
 
@@ -291,25 +234,15 @@ Installation
 ---
 Just copy Jdimo.m+.h and JdimoRuntimeHelper.m+.h to your project, create a class, inherit, use the `initWithDictionary` and enjoy!
 
+Or `pod 'jdimo'`
 
 Testing
 ---
-
-Make sure to initialize git submodules.
-
-```bash
-git submodules init
-git submodules update
-```
 
 In Xcode, hit CMD+U under iPhone simulator scheme.
 
 REALLY Good to know
 ---
-
-**What about properties that are reserved words?**
-
-As for now, `id` is converted to `objectId` automatically. Maybe someday Jdimo will have ability to map server and obj-c fields.
 
 **Jdimo classes also conforms to NSCoding protocol**
 
@@ -320,13 +253,14 @@ So you get `initWithCoder`/`encodeWithCoder` for free.
 Alternatives
 ---
 
+* [NSObject+setValuesForKeysWithJSONDictionary](https://gist.github.com/atomicbird/1592634)
 * [KVCObjectMapping](https://github.com/tuyennguyencanada/KVCObjectMapping)
-* [ManagedJdimo](https://github.com/patternoia/ManagedJdimo) - for `NSManageObject`s
 * [RestKit](http://restkit.org/)
 
 
 Contributors
 ---
 
+* **Antoine Coeur** [@Coeur](http://github.com/Coeur)
 * **Elad Ossadon** [@elado](http://twitter.com/elado)
 * **Yosi Taguri** [@yosit](http://github.com/yosit)
