@@ -1,8 +1,8 @@
 #import "Jastor.h"
 
-@interface Product : Jastor
+@interface Product : Jdimo
 
-@property (nonatomic, retain) ProductCategory *category;
+@property (nonatomic, strong) ProductCategory *category;
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSNumber *amount;
 @property (nonatomic, copy) NSDate *createdAt;

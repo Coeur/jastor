@@ -1,6 +1,6 @@
 //
-//  JastorTests.m
-//  JastorTests
+//  JdimoTests.m
+//  JdimoTests
 //
 //  Created by Elad Ossadon on 12/14/11.
 //  http://devign.me | http://elad.ossadon.com | http://twitter.com/elado
@@ -11,14 +11,13 @@
 #import "Jastor.h"
 #import "ProductCategory.h"
 #import "Product.h"
-#import "JSONKit.h"
 
-@implementation JastorTests
+@implementation JdimoTests
 
 - (void)setUp {
 	[super setUp];
 	
-	[Jastor class];
+	[Jdimo class];
 	[Product class];
 	[ProductCategory class];
 }
@@ -144,7 +143,7 @@
 	
     NSDictionary *toDictionary = [category toDictionary];
     
-    //comparing the two dictionaries
-	STAssertTrue([[toDictionary JSONString] isEqualToString:[categoryDictionary JSONString]], @"[toDictionary JSONString] should be [categoryDictionary JSONString]");
+    // comparing the two dictionaries
+	STAssertTrue([[NSJSONSerialization dataWithJSONObject:toDictionary options:0 error:nil] isEqualToData:[NSJSONSerialization dataWithJSONObject:categoryDictionary options:0 error:nil]], @"[toDictionary JSONString] should be [categoryDictionary JSONString]");
 }
 @end

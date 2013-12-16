@@ -17,7 +17,7 @@ static const char *property_getTypeName(objc_property_t property) {
 	return "@";
 }
 
-@implementation JastorRuntimeHelper
+@implementation JdimoRuntimeHelper
 
 static NSMutableDictionary *propertyListByClass;
 static NSMutableDictionary *propertyClassByClassAndPropertyName;
@@ -31,7 +31,7 @@ static NSMutableDictionary *propertyClassByClassAndPropertyName;
 }
 
 + (NSArray *)propertyNames:(Class)klass {
-    if (klass == [Jastor class]) {
+    if (klass == [Jdimo class]) {
         return [NSArray array];
     }
 	if (!propertyListByClass) {
@@ -58,7 +58,7 @@ static NSMutableDictionary *propertyClassByClassAndPropertyName;
 	free(properties);
 	
 	[propertyListByClass setObject:propertyNamesArray forKey:className];
-    NSArray* arr = [JastorRuntimeHelper propertyNames:class_getSuperclass(klass)];
+    NSArray* arr = [JdimoRuntimeHelper propertyNames:class_getSuperclass(klass)];
 	[propertyNamesArray addObjectsFromArray:arr];
     return propertyNamesArray;
 }

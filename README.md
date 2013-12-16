@@ -1,18 +1,18 @@
-Jastor
+Jdimo
 ===
 
-Jastor is an Objective-C base class that is initialized with a dictionary (probably from your JSON response), and assigns dictionary values to all its (derived class's) typed @properties.
+Jdimo is an Objective-C base class that is initialized with a dictionary (probably from your JSON response), and assigns dictionary values to all its (derived class's) typed @properties.
 
 It supports nested types, arrays, NSString, NSNumber, NSDate and more.
 
-Jastor is NOT a JSON parser. For that, you have [JSONKit](https://github.com/johnezang/JSONKit), [yajl](https://github.com/gabriel/yajl-objc) and many others.
+Jdimo is NOT a JSON parser. For that, you have [JSONKit](https://github.com/johnezang/JSONKit), [yajl](https://github.com/gabriel/yajl-objc) and many others.
 
 The name sounds like **JSON to Object**er. Or something.
 
 
 **Upgrade from previous version:**
 
-Add `dealloc` mehtods to your models and nillify your peoperties. Automattic `dealloc` is no longer done by Jastor.
+Add `dealloc` mehtods to your models and nillify your peoperties. Automattic `dealloc` is no longer done by Jdimo.
 
 
 Examples
@@ -47,11 +47,11 @@ and the following class:
 @end
 ```
 
-with Jastor, you can just inherit from `Jastor` class, and use `initWithDictionary:`
+with Jdimo, you can just inherit from `Jdimo` class, and use `initWithDictionary:`
 
 ```objc
 // Product.h
-@interface Product : Jastor
+@interface Product : Jdimo
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, retain) NSNumber *amount;
 @end
@@ -79,7 +79,7 @@ product.amount // => 13
 
 Nested Objects
 ---
-Jastor also converts nested objects to their destination type:
+Jdimo also converts nested objects to their destination type:
 
 ```js
 // JSON
@@ -93,7 +93,7 @@ Jastor also converts nested objects to their destination type:
 
 ```objc
 // ProductCategory.h
-@interface ProductCategory : Jastor
+@interface ProductCategory : Jdimo
 @property (nonatomic, copy) NSString *name;
 @end
 
@@ -109,7 +109,7 @@ Jastor also converts nested objects to their destination type:
 @end
 
 // Product.h
-@interface Product : Jastor
+@interface Product : Jdimo
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, retain) ProductCategory *category;
 @end
@@ -141,7 +141,7 @@ Arrays
 ---
 Having fun so far?
 
-Jastor also supports arrays of a certain type:
+Jdimo also supports arrays of a certain type:
 
 ```js
 // JSON
@@ -157,7 +157,7 @@ Jastor also supports arrays of a certain type:
 
 ```objc
 // ProductCategory.h
-@interface ProductCategory : Jastor
+@interface ProductCategory : Jdimo
 @property (nonatomic, copy) NSString *name;
 @end
 
@@ -173,7 +173,7 @@ Jastor also supports arrays of a certain type:
 @end
 
 // Product.h
-@interface Product : Jastor
+@interface Product : Jdimo
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, retain) NSArray *categories;
 @end
@@ -215,12 +215,12 @@ Notice the declaration of
 }
 ```
 
-it tells Jastor what class of items the array holds.
+it tells Jdimo what class of items the array holds.
 
 
 Nested + Arrays = Trees
 ---
-Jastor can handle trees of data:
+Jdimo can handle trees of data:
 
 ```js
 // JSON
@@ -246,7 +246,7 @@ Jastor can handle trees of data:
 
 ```objc
 // ProductCategory.h
-@interface ProductCategory : Jastor
+@interface ProductCategory : Jdimo
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, retain) NSArray *children;
 @end
@@ -285,11 +285,11 @@ category.children // => <NSArray>
 
 How does it work?
 ---
-Runtime API. The class's properties are read in runtime and assigns all values from dictionary to these properties with `NSObject setValue:forKey:`. For Dictionaries, Jastor instantiates a new class, based on the property type, and issues another `initWithDictionary`. Arrays are only a list of items such as strings (which are not converted) or dictionaries (which are treated the same as other dictionaries).
+Runtime API. The class's properties are read in runtime and assigns all values from dictionary to these properties with `NSObject setValue:forKey:`. For Dictionaries, Jdimo instantiates a new class, based on the property type, and issues another `initWithDictionary`. Arrays are only a list of items such as strings (which are not converted) or dictionaries (which are treated the same as other dictionaries).
 
 Installation
 ---
-Just copy Jastor.m+.h and JastorRuntimeHelper.m+.h to your project, create a class, inherit, use the `initWithDictionary` and enjoy!
+Just copy Jdimo.m+.h and JdimoRuntimeHelper.m+.h to your project, create a class, inherit, use the `initWithDictionary` and enjoy!
 
 
 Testing
@@ -309,9 +309,9 @@ REALLY Good to know
 
 **What about properties that are reserved words?**
 
-As for now, `id` is converted to `objectId` automatically. Maybe someday Jastor will have ability to map server and obj-c fields.
+As for now, `id` is converted to `objectId` automatically. Maybe someday Jdimo will have ability to map server and obj-c fields.
 
-**Jastor classes also conforms to NSCoding protocol**
+**Jdimo classes also conforms to NSCoding protocol**
 
 So you get `initWithCoder`/`encodeWithCoder` for free.
 
@@ -321,7 +321,7 @@ Alternatives
 ---
 
 * [KVCObjectMapping](https://github.com/tuyennguyencanada/KVCObjectMapping)
-* [ManagedJastor](https://github.com/patternoia/ManagedJastor) - for `NSManageObject`s
+* [ManagedJdimo](https://github.com/patternoia/ManagedJdimo) - for `NSManageObject`s
 * [RestKit](http://restkit.org/)
 
 

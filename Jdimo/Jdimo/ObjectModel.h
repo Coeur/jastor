@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CoeurHelper.h"// needed to allow using 'as:'
+#import "NSObject+as.h"// needed to allow using 'as:'
 #import <CoreData/CoreData.h>
 
 

@@ -1,7 +1,7 @@
 #import "Jastor.h"
 #import "JastorRuntimeHelper.h"
 
-@implementation Jastor
+@implementation Jdimo
 
 @synthesize objectId;
 static NSString *idPropertyName = @"id";
@@ -11,7 +11,7 @@ Class nsDictionaryClass;
 Class nsArrayClass;
 
 + (id)objectFromDictionary:(NSDictionary*)dictionary {
-    id item = [[[self alloc] initWithDictionary:dictionary] autorelease];
+    id item = [[self alloc] initWithDictionary:dictionary];
     return item;
 }
 
@@ -20,7 +20,7 @@ Class nsArrayClass;
 	if (!nsArrayClass) nsArrayClass = [NSArray class];
 	
 	if ((self = [super init])) {
-		for (NSString *key in [JastorRuntimeHelper propertyNames:[self class]]) {
+		for (NSString *key in [JdimoRuntimeHelper propertyNames:[self class]]) {
 
 			id value = [dictionary valueForKey:key];
 			
@@ -28,14 +28,14 @@ Class nsArrayClass;
                 continue;
             }
             
-            if ([JastorRuntimeHelper isPropertyReadOnly:[self class] propertyName:key]) {
+            if ([JdimoRuntimeHelper isPropertyReadOnly:[self class] propertyName:key]) {
                 continue;
             }
 			
 			// handle dictionary
 			if ([value isKindOfClass:nsDictionaryClass]) {
-				Class klass = [JastorRuntimeHelper propertyClassForPropertyName:key ofClass:[self class]];
-				value = [[[klass alloc] initWithDictionary:value] autorelease];
+				Class klass = [JdimoRuntimeHelper propertyClassForPropertyName:key ofClass:[self class]];
+				value = [[klass alloc] initWithDictionary:value];
 			}
 			// handle array
 			else if ([value isKindOfClass:nsArrayClass]) {
@@ -45,7 +45,7 @@ Class nsArrayClass;
 				
 				for (id child in value) {
 					if ([[child class] isSubclassOfClass:nsDictionaryClass]) {
-						Jastor *childDTO = [[[arrayItemType alloc] initWithDictionary:child] autorelease];
+						Jdimo *childDTO = [[arrayItemType alloc] initWithDictionary:child];
 						[childObjects addObject:childDTO];
 					} else {
 						[childObjects addObject:child];
@@ -69,19 +69,10 @@ Class nsArrayClass;
 	return self;	
 }
 
-- (void)dealloc {
-	self.objectId = nil;
-	
-//	for (NSString *key in [JastorRuntimeHelper propertyNames:[self class]]) {
-//		//[self setValue:nil forKey:key];
-//	}
-	
-	[super dealloc];
-}
 
 - (void)encodeWithCoder:(NSCoder*)encoder {
 	[encoder encodeObject:self.objectId forKey:idPropertyNameOnObject];
-	for (NSString *key in [JastorRuntimeHelper propertyNames:[self class]]) {
+	for (NSString *key in [JdimoRuntimeHelper propertyNames:[self class]]) {
 		[encoder encodeObject:[self valueForKey:key] forKey:key];
 	}
 }
@@ -90,8 +81,8 @@ Class nsArrayClass;
 	if ((self = [super init])) {
 		[self setValue:[decoder decodeObjectForKey:idPropertyNameOnObject] forKey:idPropertyNameOnObject];
 		
-		for (NSString *key in [JastorRuntimeHelper propertyNames:[self class]]) {
-            if ([JastorRuntimeHelper isPropertyReadOnly:[self class] propertyName:key]) {
+		for (NSString *key in [JdimoRuntimeHelper propertyNames:[self class]]) {
+            if ([JdimoRuntimeHelper isPropertyReadOnly:[self class] propertyName:key]) {
                 continue;
             }
 			id value = [decoder decodeObjectForKey:key];
@@ -109,13 +100,13 @@ Class nsArrayClass;
         [dic setObject:self.objectId forKey:idPropertyName];
     }
 	
-	for (NSString *key in [JastorRuntimeHelper propertyNames:[self class]]) {
+	for (NSString *key in [JdimoRuntimeHelper propertyNames:[self class]]) {
 		id value = [self valueForKey:key];
-        if (value && [value isKindOfClass:[Jastor class]]) {            
+        if (value && [value isKindOfClass:[Jdimo class]]) {            
             [dic setObject:[value toDictionary] forKey:key];
         } else if (value && [value isKindOfClass:[NSArray class]] && ((NSArray*)value).count > 0) {
             id internalValue = [value objectAtIndex:0];
-            if (internalValue && [internalValue isKindOfClass:[Jastor class]]) {
+            if (internalValue && [internalValue isKindOfClass:[Jdimo class]]) {
                 NSMutableArray *internalItems = [NSMutableArray array];
                 for (id item in value) {
                     [internalItems addObject:[item toDictionary]];
@@ -138,9 +129,9 @@ Class nsArrayClass;
 }
 
 - (BOOL)isEqual:(id)object {
-	if (object == nil || ![object isKindOfClass:[Jastor class]]) return NO;
+	if (object == nil || ![object isKindOfClass:[Jdimo class]]) return NO;
 	
-	Jastor *model = (Jastor *)object;
+	Jdimo *model = (Jdimo *)object;
 	
 	return [self.objectId isEqualToString:model.objectId];
 }

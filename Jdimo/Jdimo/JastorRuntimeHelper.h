@@ -1,4 +1,4 @@
-@interface JastorRuntimeHelper : NSObject {
+@interface JdimoRuntimeHelper : NSObject {
 	
 }
 + (BOOL)isPropertyReadOnly:(Class)klass propertyName:(NSString*)propertyName;

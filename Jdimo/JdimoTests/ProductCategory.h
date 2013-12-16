@@ -1,8 +1,8 @@
 #import "Jastor.h"
 
-@interface ProductCategory : Jastor
+@interface ProductCategory : Jdimo
 
 @property (nonatomic, copy) NSString *name;
-@property (nonatomic, retain) NSArray *children;
+@property (nonatomic, strong) NSArray *children;
 
 @end

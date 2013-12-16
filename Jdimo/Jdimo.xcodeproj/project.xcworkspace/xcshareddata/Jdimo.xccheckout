@@ -16,13 +16,11 @@
 		<string>https://github.com/johnezang/JSONKit.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Jastor/Jdimo.xcodeproj/project.xcworkspace</string>
+	<string>Jdimo/Jdimo.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>12A76C50-260B-4424-8D02-2D1A66BB0E17</key>
 		<string>../../..</string>
-		<key>EA2D9EDD-80BD-4653-B2D2-F2157F833B87</key>
-		<string>../../JastorTests/3rdparty/JSONKIT</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/Coeur/jdimo.git</string>
@@ -39,14 +37,6 @@
 			<string>12A76C50-260B-4424-8D02-2D1A66BB0E17</string>
 			<key>IDESourceControlWCCName</key>
 			<string>jdimo</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>EA2D9EDD-80BD-4653-B2D2-F2157F833B87</string>
-			<key>IDESourceControlWCCName</key>
-			<string>JSONKIT</string>
 		</dict>
 	</array>
 </dict>
