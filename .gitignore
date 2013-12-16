@@ -1,3 +1,19 @@
+# temp nibs and swap files
+*~.nib
+*.swp
+*.orig
+
+# OS X folder attributes
 .DS_Store
-Jdimo/Jdimo.xcodeproj/project.xcworkspace/
-Jdimo/Jdimo.xcodeproj/xcuserdata/
+
+# Xcode
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xccheckout
+xcuserdata/
+
+# CocoaPods
+Pods/
+DerivedData/
