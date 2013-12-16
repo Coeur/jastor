@@ -1,11 +1,7 @@
-#import "Jastor.h"
-#import "JastorRuntimeHelper.h"
+#import "Jdimo.h"
+#import "JdimoRuntimeHelper.h"
 
-@implementation Jdimo
-
-@synthesize objectId;
-static NSString *idPropertyName = @"id";
-static NSString *idPropertyNameOnObject = @"objectId";
+@implementation ObjectModel
 
 Class nsDictionaryClass;
 Class nsArrayClass;
@@ -45,7 +41,7 @@ Class nsArrayClass;
 				
 				for (id child in value) {
 					if ([[child class] isSubclassOfClass:nsDictionaryClass]) {
-						Jdimo *childDTO = [[arrayItemType alloc] initWithDictionary:child];
+						ObjectModel *childDTO = [[arrayItemType alloc] initWithDictionary:child];
 						[childObjects addObject:childDTO];
 					} else {
 						[childObjects addObject:child];
@@ -57,21 +53,12 @@ Class nsArrayClass;
 			// handle all others
 			[self setValue:value forKey:key];
 		}
-		
-		id objectIdValue;
-		if ((objectIdValue = [dictionary objectForKey:idPropertyName]) && objectIdValue != [NSNull null]) {
-			if (![objectIdValue isKindOfClass:[NSString class]]) {
-				objectIdValue = [NSString stringWithFormat:@"%@", objectIdValue];
-			}
-			[self setValue:objectIdValue forKey:idPropertyNameOnObject];
-		}
 	}
 	return self;	
 }
 
 
 - (void)encodeWithCoder:(NSCoder*)encoder {
-	[encoder encodeObject:self.objectId forKey:idPropertyNameOnObject];
 	for (NSString *key in [JdimoRuntimeHelper propertyNames:[self class]]) {
 		[encoder encodeObject:[self valueForKey:key] forKey:key];
 	}
@@ -79,8 +66,6 @@ Class nsArrayClass;
 
 - (id)initWithCoder:(NSCoder *)decoder {
 	if ((self = [super init])) {
-		[self setValue:[decoder decodeObjectForKey:idPropertyNameOnObject] forKey:idPropertyNameOnObject];
-		
 		for (NSString *key in [JdimoRuntimeHelper propertyNames:[self class]]) {
             if ([JdimoRuntimeHelper isPropertyReadOnly:[self class] propertyName:key]) {
                 continue;
@@ -96,17 +81,14 @@ Class nsArrayClass;
 
 - (NSMutableDictionary *)toDictionary {
 	NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-    if (self.objectId) {
-        [dic setObject:self.objectId forKey:idPropertyName];
-    }
 	
 	for (NSString *key in [JdimoRuntimeHelper propertyNames:[self class]]) {
 		id value = [self valueForKey:key];
-        if (value && [value isKindOfClass:[Jdimo class]]) {            
+        if (value && [value isKindOfClass:[ObjectModel class]]) {
             [dic setObject:[value toDictionary] forKey:key];
         } else if (value && [value isKindOfClass:[NSArray class]] && ((NSArray*)value).count > 0) {
             id internalValue = [value objectAtIndex:0];
-            if (internalValue && [internalValue isKindOfClass:[Jdimo class]]) {
+            if (internalValue && [internalValue isKindOfClass:[ObjectModel class]]) {
                 NSMutableArray *internalItems = [NSMutableArray array];
                 for (id item in value) {
                     [internalItems addObject:[item toDictionary]];
@@ -125,15 +107,15 @@ Class nsArrayClass;
 - (NSString *)description {
     NSMutableDictionary *dic = [self toDictionary];
 	
-	return [NSString stringWithFormat:@"#<%@: id = %@ %@>", [self class], self.objectId, [dic description]];
+	return [NSString stringWithFormat:@"#<%@: description = %@>", [self class], [dic description]];
 }
 
 - (BOOL)isEqual:(id)object {
-	if (object == nil || ![object isKindOfClass:[Jdimo class]]) return NO;
+	if (object == nil || ![object isKindOfClass:[ObjectModel class]]) return NO;
 	
-	Jdimo *model = (Jdimo *)object;
+	ObjectModel *model = (ObjectModel *)object;
 	
-	return [self.objectId isEqualToString:model.objectId];
+	return [[self toDictionary] isEqualToDictionary:[model toDictionary]];
 }
 
 @end

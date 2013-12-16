@@ -1,6 +1,6 @@
-#import "Jastor.h"
+#import "Jdimo.h"
 
-@interface Product : Jdimo
+@interface Product : ObjectModel
 
 @property (nonatomic, strong) ProductCategory *category;
 @property (nonatomic, copy) NSString *name;

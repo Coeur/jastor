@@ -6,11 +6,9 @@
 //  http://devign.me | http://elad.ossadon.com | http://twitter.com/elado
 //
 
-@interface Jdimo : NSObject <NSCoding>
+@interface ObjectModel : NSObject <NSCoding>
 
-@property (nonatomic, copy) NSString *objectId;
 + (id)objectFromDictionary:(NSDictionary*)dictionary;
-
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 
 - (NSMutableDictionary *)toDictionary;

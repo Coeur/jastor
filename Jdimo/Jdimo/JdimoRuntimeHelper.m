@@ -1,6 +1,6 @@
 #import <objc/runtime.h>
-#import "JastorRuntimeHelper.h"
-#import "Jastor.h"
+#import "JdimoRuntimeHelper.h"
+#import "Jdimo.h"
 
 static const char *property_getTypeName(objc_property_t property) {
 	const char *attributes = property_getAttributes(property);
@@ -31,7 +31,7 @@ static NSMutableDictionary *propertyClassByClassAndPropertyName;
 }
 
 + (NSArray *)propertyNames:(Class)klass {
-    if (klass == [Jdimo class]) {
+    if (klass == [ObjectModel class]) {
         return [NSArray array];
     }
 	if (!propertyListByClass) {

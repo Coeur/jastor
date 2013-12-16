@@ -8,23 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		C81EF95B185F109F00B48EC4 /* NSObject+setValuesForKeysWithJSONDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = C81EF955185F109F00B48EC4 /* NSObject+setValuesForKeysWithJSONDictionary.h */; };
-		C81EF95C185F109F00B48EC4 /* NSObject+setValuesForKeysWithJSONDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = C81EF956185F109F00B48EC4 /* NSObject+setValuesForKeysWithJSONDictionary.m */; };
 		C81EF95D185F109F00B48EC4 /* ObjectModel.h in Headers */ = {isa = PBXBuildFile; fileRef = C81EF957185F109F00B48EC4 /* ObjectModel.h */; };
-		C81EF95E185F109F00B48EC4 /* ObjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C81EF958185F109F00B48EC4 /* ObjectModel.m */; };
 		C81EF95F185F109F00B48EC4 /* PropertiesRuntimeHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = C81EF959185F109F00B48EC4 /* PropertiesRuntimeHelper.h */; };
-		C81EF960185F109F00B48EC4 /* PropertiesRuntimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C81EF95A185F109F00B48EC4 /* PropertiesRuntimeHelper.m */; };
 		C8D56422185F1C7F00C069A7 /* NSObject+as.h in Headers */ = {isa = PBXBuildFile; fileRef = C8D56420185F1C7F00C069A7 /* NSObject+as.h */; };
 		C8D56423185F1C7F00C069A7 /* NSObject+as.m in Sources */ = {isa = PBXBuildFile; fileRef = C8D56421185F1C7F00C069A7 /* NSObject+as.m */; };
 		E4E480E31499B821009C36D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E480E21499B821009C36D8 /* Foundation.framework */; };
-		E4E480E91499B821009C36D8 /* Jastor.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E480E81499B821009C36D8 /* Jastor.m */; };
+		E4E480E91499B821009C36D8 /* Jdimo.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E480E81499B821009C36D8 /* Jdimo.m */; };
 		E4E480F11499B821009C36D8 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E480F01499B821009C36D8 /* SenTestingKit.framework */; };
 		E4E480F31499B821009C36D8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E480F21499B821009C36D8 /* UIKit.framework */; };
 		E4E480F41499B821009C36D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E480E21499B821009C36D8 /* Foundation.framework */; };
 		E4E480F71499B821009C36D8 /* libJdimo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E480DF1499B821009C36D8 /* libJdimo.a */; };
 		E4E480FD1499B821009C36D8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E4E480FB1499B821009C36D8 /* InfoPlist.strings */; };
 		E4E481001499B821009C36D8 /* JastorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E480FF1499B821009C36D8 /* JastorTests.m */; };
-		E4E4810F1499BBFE009C36D8 /* JastorRuntimeHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = E4E4810D1499BBFE009C36D8 /* JastorRuntimeHelper.h */; };
-		E4E481101499BBFE009C36D8 /* JastorRuntimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E4810E1499BBFE009C36D8 /* JastorRuntimeHelper.m */; };
+		E4E4810F1499BBFE009C36D8 /* JdimoRuntimeHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = E4E4810D1499BBFE009C36D8 /* JdimoRuntimeHelper.h */; };
+		E4E481101499BBFE009C36D8 /* JdimoRuntimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E4810E1499BBFE009C36D8 /* JdimoRuntimeHelper.m */; };
 		E4E4811B1499CDD6009C36D8 /* ProductCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = E4E481191499CDD6009C36D8 /* ProductCategory.h */; };
 		E4E4811C1499CDD6009C36D8 /* ProductCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E4811A1499CDD6009C36D8 /* ProductCategory.m */; };
 		E4E481231499CF21009C36D8 /* Product.h in Headers */ = {isa = PBXBuildFile; fileRef = E4E481211499CF21009C36D8 /* Product.h */; };
@@ -53,8 +50,8 @@
 		E4E480DF1499B821009C36D8 /* libJdimo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJdimo.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4E480E21499B821009C36D8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E4E480E61499B821009C36D8 /* Jdimo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Jdimo-Prefix.pch"; sourceTree = "<group>"; };
-		E4E480E71499B821009C36D8 /* Jastor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Jastor.h; sourceTree = "<group>"; };
-		E4E480E81499B821009C36D8 /* Jastor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Jastor.m; sourceTree = "<group>"; };
+		E4E480E71499B821009C36D8 /* Jdimo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Jdimo.h; sourceTree = "<group>"; };
+		E4E480E81499B821009C36D8 /* Jdimo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Jdimo.m; sourceTree = "<group>"; };
 		E4E480EF1499B821009C36D8 /* JdimoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JdimoTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4E480F01499B821009C36D8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		E4E480F21499B821009C36D8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -62,8 +59,8 @@
 		E4E480FC1499B821009C36D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E4E480FE1499B821009C36D8 /* JastorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JastorTests.h; sourceTree = "<group>"; };
 		E4E480FF1499B821009C36D8 /* JastorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JastorTests.m; sourceTree = "<group>"; };
-		E4E4810D1499BBFE009C36D8 /* JastorRuntimeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JastorRuntimeHelper.h; sourceTree = "<group>"; };
-		E4E4810E1499BBFE009C36D8 /* JastorRuntimeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JastorRuntimeHelper.m; sourceTree = "<group>"; };
+		E4E4810D1499BBFE009C36D8 /* JdimoRuntimeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JdimoRuntimeHelper.h; sourceTree = "<group>"; };
+		E4E4810E1499BBFE009C36D8 /* JdimoRuntimeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JdimoRuntimeHelper.m; sourceTree = "<group>"; };
 		E4E481191499CDD6009C36D8 /* ProductCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCategory.h; sourceTree = "<group>"; };
 		E4E4811A1499CDD6009C36D8 /* ProductCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCategory.m; sourceTree = "<group>"; };
 		E4E481211499CF21009C36D8 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
@@ -93,6 +90,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C8D56424185F2AE500C069A7 /* tmp */ = {
+			isa = PBXGroup;
+			children = (
+				C81EF955185F109F00B48EC4 /* NSObject+setValuesForKeysWithJSONDictionary.h */,
+				C81EF956185F109F00B48EC4 /* NSObject+setValuesForKeysWithJSONDictionary.m */,
+				C81EF957185F109F00B48EC4 /* ObjectModel.h */,
+				C81EF958185F109F00B48EC4 /* ObjectModel.m */,
+				C81EF959185F109F00B48EC4 /* PropertiesRuntimeHelper.h */,
+				C81EF95A185F109F00B48EC4 /* PropertiesRuntimeHelper.m */,
+			);
+			name = tmp;
+			sourceTree = "<group>";
+		};
 		E4E480D41499B821009C36D8 = {
 			isa = PBXGroup;
 			children = (
@@ -125,19 +135,14 @@
 		E4E480E41499B821009C36D8 /* Jdimo */ = {
 			isa = PBXGroup;
 			children = (
+				C8D56424185F2AE500C069A7 /* tmp */,
 				C8D56420185F1C7F00C069A7 /* NSObject+as.h */,
 				C8D56421185F1C7F00C069A7 /* NSObject+as.m */,
-				C81EF955185F109F00B48EC4 /* NSObject+setValuesForKeysWithJSONDictionary.h */,
-				C81EF956185F109F00B48EC4 /* NSObject+setValuesForKeysWithJSONDictionary.m */,
-				C81EF957185F109F00B48EC4 /* ObjectModel.h */,
-				C81EF958185F109F00B48EC4 /* ObjectModel.m */,
-				C81EF959185F109F00B48EC4 /* PropertiesRuntimeHelper.h */,
-				C81EF95A185F109F00B48EC4 /* PropertiesRuntimeHelper.m */,
-				E4E480E71499B821009C36D8 /* Jastor.h */,
-				E4E480E81499B821009C36D8 /* Jastor.m */,
+				E4E480E71499B821009C36D8 /* Jdimo.h */,
+				E4E480E81499B821009C36D8 /* Jdimo.m */,
+				E4E4810D1499BBFE009C36D8 /* JdimoRuntimeHelper.h */,
+				E4E4810E1499BBFE009C36D8 /* JdimoRuntimeHelper.m */,
 				E4E480E51499B821009C36D8 /* Supporting Files */,
-				E4E4810D1499BBFE009C36D8 /* JastorRuntimeHelper.h */,
-				E4E4810E1499BBFE009C36D8 /* JastorRuntimeHelper.m */,
 			);
 			path = Jdimo;
 			sourceTree = "<group>";
@@ -182,7 +187,7 @@
 			files = (
 				C81EF95F185F109F00B48EC4 /* PropertiesRuntimeHelper.h in Headers */,
 				C8D56422185F1C7F00C069A7 /* NSObject+as.h in Headers */,
-				E4E4810F1499BBFE009C36D8 /* JastorRuntimeHelper.h in Headers */,
+				E4E4810F1499BBFE009C36D8 /* JdimoRuntimeHelper.h in Headers */,
 				C81EF95B185F109F00B48EC4 /* NSObject+setValuesForKeysWithJSONDictionary.h in Headers */,
 				E4E4811B1499CDD6009C36D8 /* ProductCategory.h in Headers */,
 				C81EF95D185F109F00B48EC4 /* ObjectModel.h in Headers */,
@@ -287,13 +292,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4E480E91499B821009C36D8 /* Jastor.m in Sources */,
-				E4E481101499BBFE009C36D8 /* JastorRuntimeHelper.m in Sources */,
-				C81EF960185F109F00B48EC4 /* PropertiesRuntimeHelper.m in Sources */,
+				E4E480E91499B821009C36D8 /* Jdimo.m in Sources */,
+				E4E481101499BBFE009C36D8 /* JdimoRuntimeHelper.m in Sources */,
 				E4E4811C1499CDD6009C36D8 /* ProductCategory.m in Sources */,
 				E4E481241499CF21009C36D8 /* Product.m in Sources */,
-				C81EF95E185F109F00B48EC4 /* ObjectModel.m in Sources */,
-				C81EF95C185F109F00B48EC4 /* NSObject+setValuesForKeysWithJSONDictionary.m in Sources */,
 				C8D56423185F1C7F00C069A7 /* NSObject+as.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
