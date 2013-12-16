@@ -10,12 +10,18 @@
 		A46381DD1503692600EDD842 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = A46381D91503692600EDD842 /* CHANGELOG.md */; };
 		A46381DE1503692600EDD842 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A46381DB1503692600EDD842 /* JSONKit.m */; };
 		A46381DF1503692600EDD842 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A46381DC1503692600EDD842 /* README.md */; };
+		C81EF95B185F109F00B48EC4 /* NSObject+setValuesForKeysWithJSONDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = C81EF955185F109F00B48EC4 /* NSObject+setValuesForKeysWithJSONDictionary.h */; };
+		C81EF95C185F109F00B48EC4 /* NSObject+setValuesForKeysWithJSONDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = C81EF956185F109F00B48EC4 /* NSObject+setValuesForKeysWithJSONDictionary.m */; };
+		C81EF95D185F109F00B48EC4 /* ObjectModel.h in Headers */ = {isa = PBXBuildFile; fileRef = C81EF957185F109F00B48EC4 /* ObjectModel.h */; };
+		C81EF95E185F109F00B48EC4 /* ObjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C81EF958185F109F00B48EC4 /* ObjectModel.m */; };
+		C81EF95F185F109F00B48EC4 /* PropertiesRuntimeHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = C81EF959185F109F00B48EC4 /* PropertiesRuntimeHelper.h */; };
+		C81EF960185F109F00B48EC4 /* PropertiesRuntimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C81EF95A185F109F00B48EC4 /* PropertiesRuntimeHelper.m */; };
 		E4E480E31499B821009C36D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E480E21499B821009C36D8 /* Foundation.framework */; };
 		E4E480E91499B821009C36D8 /* Jastor.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E480E81499B821009C36D8 /* Jastor.m */; };
 		E4E480F11499B821009C36D8 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E480F01499B821009C36D8 /* SenTestingKit.framework */; };
 		E4E480F31499B821009C36D8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E480F21499B821009C36D8 /* UIKit.framework */; };
 		E4E480F41499B821009C36D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E480E21499B821009C36D8 /* Foundation.framework */; };
-		E4E480F71499B821009C36D8 /* libJastor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E480DF1499B821009C36D8 /* libJastor.a */; };
+		E4E480F71499B821009C36D8 /* libJdimo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E480DF1499B821009C36D8 /* libJdimo.a */; };
 		E4E480FD1499B821009C36D8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E4E480FB1499B821009C36D8 /* InfoPlist.strings */; };
 		E4E481001499B821009C36D8 /* JastorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E480FF1499B821009C36D8 /* JastorTests.m */; };
 		E4E4810F1499BBFE009C36D8 /* JastorRuntimeHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = E4E4810D1499BBFE009C36D8 /* JastorRuntimeHelper.h */; };
@@ -41,15 +47,21 @@
 		A46381DA1503692600EDD842 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		A46381DB1503692600EDD842 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		A46381DC1503692600EDD842 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		E4E480DF1499B821009C36D8 /* libJastor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJastor.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C81EF955185F109F00B48EC4 /* NSObject+setValuesForKeysWithJSONDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+setValuesForKeysWithJSONDictionary.h"; sourceTree = "<group>"; };
+		C81EF956185F109F00B48EC4 /* NSObject+setValuesForKeysWithJSONDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+setValuesForKeysWithJSONDictionary.m"; sourceTree = "<group>"; };
+		C81EF957185F109F00B48EC4 /* ObjectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectModel.h; sourceTree = "<group>"; };
+		C81EF958185F109F00B48EC4 /* ObjectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectModel.m; sourceTree = "<group>"; };
+		C81EF959185F109F00B48EC4 /* PropertiesRuntimeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertiesRuntimeHelper.h; sourceTree = "<group>"; };
+		C81EF95A185F109F00B48EC4 /* PropertiesRuntimeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertiesRuntimeHelper.m; sourceTree = "<group>"; };
+		E4E480DF1499B821009C36D8 /* libJdimo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJdimo.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4E480E21499B821009C36D8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		E4E480E61499B821009C36D8 /* Jastor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Jastor-Prefix.pch"; sourceTree = "<group>"; };
+		E4E480E61499B821009C36D8 /* Jdimo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Jdimo-Prefix.pch"; sourceTree = "<group>"; };
 		E4E480E71499B821009C36D8 /* Jastor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Jastor.h; sourceTree = "<group>"; };
 		E4E480E81499B821009C36D8 /* Jastor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Jastor.m; sourceTree = "<group>"; };
-		E4E480EF1499B821009C36D8 /* JastorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JastorTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4E480EF1499B821009C36D8 /* JdimoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JdimoTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4E480F01499B821009C36D8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		E4E480F21499B821009C36D8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		E4E480FA1499B821009C36D8 /* JastorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JastorTests-Info.plist"; sourceTree = "<group>"; };
+		E4E480FA1499B821009C36D8 /* JdimoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JdimoTests-Info.plist"; sourceTree = "<group>"; };
 		E4E480FC1499B821009C36D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E4E480FE1499B821009C36D8 /* JastorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JastorTests.h; sourceTree = "<group>"; };
 		E4E480FF1499B821009C36D8 /* JastorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JastorTests.m; sourceTree = "<group>"; };
@@ -77,7 +89,7 @@
 				E4E480F11499B821009C36D8 /* SenTestingKit.framework in Frameworks */,
 				E4E480F31499B821009C36D8 /* UIKit.framework in Frameworks */,
 				E4E480F41499B821009C36D8 /* Foundation.framework in Frameworks */,
-				E4E480F71499B821009C36D8 /* libJastor.a in Frameworks */,
+				E4E480F71499B821009C36D8 /* libJdimo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,8 +118,8 @@
 		E4E480D41499B821009C36D8 = {
 			isa = PBXGroup;
 			children = (
-				E4E480E41499B821009C36D8 /* Jastor */,
-				E4E480F81499B821009C36D8 /* JastorTests */,
+				E4E480E41499B821009C36D8 /* Jdimo */,
+				E4E480F81499B821009C36D8 /* JdimoTests */,
 				E4E480E11499B821009C36D8 /* Frameworks */,
 				E4E480E01499B821009C36D8 /* Products */,
 			);
@@ -116,8 +128,8 @@
 		E4E480E01499B821009C36D8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E4E480DF1499B821009C36D8 /* libJastor.a */,
-				E4E480EF1499B821009C36D8 /* JastorTests.octest */,
+				E4E480DF1499B821009C36D8 /* libJdimo.a */,
+				E4E480EF1499B821009C36D8 /* JdimoTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,27 +144,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E4E480E41499B821009C36D8 /* Jastor */ = {
+		E4E480E41499B821009C36D8 /* Jdimo */ = {
 			isa = PBXGroup;
 			children = (
+				C81EF955185F109F00B48EC4 /* NSObject+setValuesForKeysWithJSONDictionary.h */,
+				C81EF956185F109F00B48EC4 /* NSObject+setValuesForKeysWithJSONDictionary.m */,
+				C81EF957185F109F00B48EC4 /* ObjectModel.h */,
+				C81EF958185F109F00B48EC4 /* ObjectModel.m */,
+				C81EF959185F109F00B48EC4 /* PropertiesRuntimeHelper.h */,
+				C81EF95A185F109F00B48EC4 /* PropertiesRuntimeHelper.m */,
 				E4E480E71499B821009C36D8 /* Jastor.h */,
 				E4E480E81499B821009C36D8 /* Jastor.m */,
 				E4E480E51499B821009C36D8 /* Supporting Files */,
 				E4E4810D1499BBFE009C36D8 /* JastorRuntimeHelper.h */,
 				E4E4810E1499BBFE009C36D8 /* JastorRuntimeHelper.m */,
 			);
-			path = Jastor;
+			path = Jdimo;
 			sourceTree = "<group>";
 		};
 		E4E480E51499B821009C36D8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E4E480E61499B821009C36D8 /* Jastor-Prefix.pch */,
+				E4E480E61499B821009C36D8 /* Jdimo-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		E4E480F81499B821009C36D8 /* JastorTests */ = {
+		E4E480F81499B821009C36D8 /* JdimoTests */ = {
 			isa = PBXGroup;
 			children = (
 				A46381D71503692600EDD842 /* 3rdparty */,
@@ -164,13 +182,13 @@
 				E4E481191499CDD6009C36D8 /* ProductCategory.h */,
 				E4E4811A1499CDD6009C36D8 /* ProductCategory.m */,
 			);
-			path = JastorTests;
+			path = JdimoTests;
 			sourceTree = "<group>";
 		};
 		E4E480F91499B821009C36D8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E4E480FA1499B821009C36D8 /* JastorTests-Info.plist */,
+				E4E480FA1499B821009C36D8 /* JdimoTests-Info.plist */,
 				E4E480FB1499B821009C36D8 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -183,8 +201,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C81EF95F185F109F00B48EC4 /* PropertiesRuntimeHelper.h in Headers */,
 				E4E4810F1499BBFE009C36D8 /* JastorRuntimeHelper.h in Headers */,
+				C81EF95B185F109F00B48EC4 /* NSObject+setValuesForKeysWithJSONDictionary.h in Headers */,
 				E4E4811B1499CDD6009C36D8 /* ProductCategory.h in Headers */,
+				C81EF95D185F109F00B48EC4 /* ObjectModel.h in Headers */,
 				E4E481231499CF21009C36D8 /* Product.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,9 +213,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		E4E480DE1499B821009C36D8 /* Jastor */ = {
+		E4E480DE1499B821009C36D8 /* Jdimo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E4E481031499B821009C36D8 /* Build configuration list for PBXNativeTarget "Jastor" */;
+			buildConfigurationList = E4E481031499B821009C36D8 /* Build configuration list for PBXNativeTarget "Jdimo" */;
 			buildPhases = (
 				E4E480DB1499B821009C36D8 /* Sources */,
 				E4E480DC1499B821009C36D8 /* Frameworks */,
@@ -204,14 +225,14 @@
 			);
 			dependencies = (
 			);
-			name = Jastor;
+			name = Jdimo;
 			productName = Jastor;
-			productReference = E4E480DF1499B821009C36D8 /* libJastor.a */;
+			productReference = E4E480DF1499B821009C36D8 /* libJdimo.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		E4E480EE1499B821009C36D8 /* JastorTests */ = {
+		E4E480EE1499B821009C36D8 /* JdimoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E4E481061499B821009C36D8 /* Build configuration list for PBXNativeTarget "JastorTests" */;
+			buildConfigurationList = E4E481061499B821009C36D8 /* Build configuration list for PBXNativeTarget "JdimoTests" */;
 			buildPhases = (
 				E4E480EA1499B821009C36D8 /* Sources */,
 				E4E480EB1499B821009C36D8 /* Frameworks */,
@@ -223,9 +244,9 @@
 			dependencies = (
 				E4E480F61499B821009C36D8 /* PBXTargetDependency */,
 			);
-			name = JastorTests;
+			name = JdimoTests;
 			productName = JastorTests;
-			productReference = E4E480EF1499B821009C36D8 /* JastorTests.octest */;
+			productReference = E4E480EF1499B821009C36D8 /* JdimoTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -236,7 +257,7 @@
 			attributes = {
 				LastUpgradeCheck = 0420;
 			};
-			buildConfigurationList = E4E480D91499B821009C36D8 /* Build configuration list for PBXProject "Jastor" */;
+			buildConfigurationList = E4E480D91499B821009C36D8 /* Build configuration list for PBXProject "Jdimo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -248,8 +269,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E4E480DE1499B821009C36D8 /* Jastor */,
-				E4E480EE1499B821009C36D8 /* JastorTests */,
+				E4E480DE1499B821009C36D8 /* Jdimo */,
+				E4E480EE1499B821009C36D8 /* JdimoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -290,8 +311,11 @@
 			files = (
 				E4E480E91499B821009C36D8 /* Jastor.m in Sources */,
 				E4E481101499BBFE009C36D8 /* JastorRuntimeHelper.m in Sources */,
+				C81EF960185F109F00B48EC4 /* PropertiesRuntimeHelper.m in Sources */,
 				E4E4811C1499CDD6009C36D8 /* ProductCategory.m in Sources */,
 				E4E481241499CF21009C36D8 /* Product.m in Sources */,
+				C81EF95E185F109F00B48EC4 /* ObjectModel.m in Sources */,
+				C81EF95C185F109F00B48EC4 /* NSObject+setValuesForKeysWithJSONDictionary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,7 +333,7 @@
 /* Begin PBXTargetDependency section */
 		E4E480F61499B821009C36D8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E4E480DE1499B821009C36D8 /* Jastor */;
+			target = E4E480DE1499B821009C36D8 /* Jdimo */;
 			targetProxy = E4E480F51499B821009C36D8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -371,9 +395,9 @@
 			buildSettings = {
 				DSTROOT = /tmp/Jastor.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Jastor/Jastor-Prefix.pch";
+				GCC_PREFIX_HEADER = "Jastor/Jdimo-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Jdimo;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -383,9 +407,9 @@
 			buildSettings = {
 				DSTROOT = /tmp/Jastor.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Jastor/Jastor-Prefix.pch";
+				GCC_PREFIX_HEADER = "Jastor/Jdimo-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Jdimo;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -399,8 +423,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Jastor/Jastor-Prefix.pch";
-				INFOPLIST_FILE = "JastorTests/JastorTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "JastorTests/JdimoTests-Info.plist";
+				PRODUCT_NAME = JdimoTests;
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -414,8 +438,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Jastor/Jastor-Prefix.pch";
-				INFOPLIST_FILE = "JastorTests/JastorTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "JastorTests/JdimoTests-Info.plist";
+				PRODUCT_NAME = JdimoTests;
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
@@ -423,7 +447,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E4E480D91499B821009C36D8 /* Build configuration list for PBXProject "Jastor" */ = {
+		E4E480D91499B821009C36D8 /* Build configuration list for PBXProject "Jdimo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E4E481011499B821009C36D8 /* Debug */,
@@ -432,7 +456,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E4E481031499B821009C36D8 /* Build configuration list for PBXNativeTarget "Jastor" */ = {
+		E4E481031499B821009C36D8 /* Build configuration list for PBXNativeTarget "Jdimo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E4E481041499B821009C36D8 /* Debug */,
@@ -441,7 +465,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E4E481061499B821009C36D8 /* Build configuration list for PBXNativeTarget "JastorTests" */ = {
+		E4E481061499B821009C36D8 /* Build configuration list for PBXNativeTarget "JdimoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E4E481071499B821009C36D8 /* Debug */,

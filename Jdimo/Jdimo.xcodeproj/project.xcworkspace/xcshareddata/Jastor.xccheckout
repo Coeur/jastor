@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A83EEE8D-CEB4-450F-9258-69444DD7F6CB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Jastor</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>12A76C50-260B-4424-8D02-2D1A66BB0E17</key>
+		<string>https://github.com/Coeur/jdimo.git</string>
+		<key>EA2D9EDD-80BD-4653-B2D2-F2157F833B87</key>
+		<string>https://github.com/johnezang/JSONKit.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Jastor/Jastor.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>12A76C50-260B-4424-8D02-2D1A66BB0E17</key>
+		<string>../../..</string>
+		<key>EA2D9EDD-80BD-4653-B2D2-F2157F833B87</key>
+		<string>../../JastorTests/3rdparty/JSONKIT</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Coeur/jdimo.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>12A76C50-260B-4424-8D02-2D1A66BB0E17</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>12A76C50-260B-4424-8D02-2D1A66BB0E17</string>
+			<key>IDESourceControlWCCName</key>
+			<string>jdimo</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EA2D9EDD-80BD-4653-B2D2-F2157F833B87</string>
+			<key>IDESourceControlWCCName</key>
+			<string>JSONKIT</string>
+		</dict>
+	</array>
+</dict>
+</plist>
